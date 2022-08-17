@@ -17,7 +17,7 @@ variable "region" {
 
 terraform {
   backend "s3" {
-    bucket = "demo-eks-infra-state"
+    bucket = "demo-infra-eks-state"
     key    = "infrastructure/terraform.tfstate"
     region = "us-west-2"
   }
