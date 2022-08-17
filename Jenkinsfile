@@ -4,17 +4,16 @@ node {
     checkout scm
    }
 
-	
-
   stage("Init") {
     sh "./terraform init"
   }
   
-  
   stage("EKS execution") {
+	  
     if ( "${OPTION}" == 'create-stack') {
             catchError {
     sh "./terraform apply -auto-approve"
+	    }
     echo currentBuild.result
     }
       
@@ -23,7 +22,6 @@ node {
     sh "./terraform destroy -auto-approve"
                        }
     echo currentBuild.result
-   
     }
 	  
     if ( "${OPTION}" == 'plan-stack') {
