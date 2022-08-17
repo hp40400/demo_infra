@@ -14,3 +14,11 @@ variable "region" {
   default     = "eu-west-2"
   description = "AWS region"
 }
+
+terraform {
+  backend "s3" {
+    bucket = "demo-eks-infra-state"
+    key    = "infrastructure/terraform.tfstate"
+    region = "eu-west-2"
+  }
+}
