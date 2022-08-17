@@ -26,7 +26,7 @@ node {
 	  
     if ( "${OPTION}" == 'plan-stack') {
             catchError {
-     sh "terraform_12 plan"
+     sh "terraform plan"
                        }
     echo currentBuild.result
     }
