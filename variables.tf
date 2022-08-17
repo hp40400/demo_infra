@@ -1,12 +1,12 @@
 variable "aws_vpc_name" {
   type        = string
-  default = "OWASPJuiceShop-VPC"
+  default = "Demo-VPC"
   description = "Name of the VPC"
 }
 
 variable "eks_cluster_name" {
   type        = string
-  default = "OWASPJuiceShop-EKS"
+  default = "Demo-EKS"
   description = "Name of the EKS Cluster"
 }
 
